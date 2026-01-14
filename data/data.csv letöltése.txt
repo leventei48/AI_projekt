@@ -1,0 +1,3 @@
+https://www.kaggle.com/datasets/daniaherzalla/tii-ssrc-23
+
+A letöltött .csv fájlt ebbe a mappába tedd bele
