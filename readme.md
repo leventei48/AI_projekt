@@ -209,19 +209,6 @@ crew = Crew(
 | 50,000 | ~5-10 perc | Nagyon lassú |
 | 100,000 | ~15-25 perc | Nem ajánlott |
 
-### Memóriahasználat:
-- **Alap**: ~2-4 GB (50,000 sor)
-- **Maximum**: ~8 GB (250,000 sor, teljes feldolgozás)
-
-## 🤝 Közreműködés
-
-A projekt nyitott a fejlesztésre. Fontosabb irányok:
-
-1. **Új detektor algoritmusok** (XGBoost, Neural Networks)
-2. **További LLM szolgáltatók** (OpenAI, Anthropic)
-3. **Real-time monitoring** támogatás
-4. **Webes felület** (Flask/Django)
-5. **További tesztadatok** és benchmark-ok
 
 ## 📚 Hasznos Linkek
 
