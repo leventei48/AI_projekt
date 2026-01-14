@@ -185,7 +185,7 @@ crew = Crew(
 - **Parancs**: `--max-rows 10000`
 
 #### 3. **Ollama modell nem található**
-- **Megoldás 1**: Telepítsd a modellt: `ollama pull llama3.1:8b-instruct`
+- **Megoldás 1**: Telepítsd a modellt: `ollama pull llama3`
 - **Megoldás 2**: Használj más modellt: `llm_name="llama2"` a detector.py-ban
 - **Megoldás 3**: Használd az ML módot (nem kell Ollama)
 
