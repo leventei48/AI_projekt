@@ -39,10 +39,10 @@ ids_crew/
 # Python csomagok telepítése
 pip install -r requirements.txt
 
-# Opcionális: SHAP (magyarázatokhoz)
+# SHAP telepítése (magyarázatokhoz)
 pip install shap
 
-# Opcionális: Ollama (LLM módhoz)
+# Ollama telepítése (LLM módhoz)
 # Letöltés: https://ollama.com/download
 ollama pull llama3
 ```
