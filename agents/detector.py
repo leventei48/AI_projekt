@@ -10,7 +10,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 log = get_logger(__name__)
-
+ #random forest, mert több döntési fát egyesít egy modellbe, így javítva a pontosságot és csökkentve a túltanulás esélyét.
 class Detector:
     """
     - mode='ml' : scikit‑learn RandomForest (kérdés alapján)
@@ -18,9 +18,9 @@ class Detector:
     """
     def __init__(self,
                  mode: str = "ml",
-                 model: RandomForestClassifier | None = None,
+                 model: RandomForestClassifier | None = None, 
                  llm_name: str = "llama3.1",
-                 llm_temp: float = 0.2):
+                 llm_temp: float = 0.2): # Alacsonyabb hőmérséklet a kiszámíthatóbb válaszokért
         self.mode = mode.lower()
         self.llm_name = llm_name
         self.llm_temp = llm_temp
@@ -46,7 +46,7 @@ class Detector:
         log.info(f"RandomForest betanítása {len(X_enc)} mintára...")
         
         # Egyszerű progress bar a betanításhoz
-        with tqdm(total=100, desc="Modell betanítása", bar_format='{l_bar}{bar:30}{r_bar}', colour='green') as pbar:
+        with tqdm(total=100, desc="Modell betanítása", bar_format='{l_bar}{bar:30}{r_bar}', colour='green') as pbar: 
             self.model.fit(X_enc, y)
             pbar.update(100)
             

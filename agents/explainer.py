@@ -143,11 +143,11 @@ class Explainer:
             
             # Generáljunk általános magyarázatot a legfontosabb feature-ökre
             base_explanation = "Legfontosabb jellemzők: "
-            for feat_name, importance in top_features:
-                simple_name = self._simplify_feature_name(feat_name)
-                base_explanation += f"{simple_name}({importance:.3f}), "
+            for feat_name, importance in top_features: 
+                simple_name = self._simplify_feature_name(feat_name) # Egyszerűsített név
+                base_explanation += f"{simple_name}({importance:.3f}), " # Egyszerűsített név
             
-            base_explanation = base_explanation.rstrip(", ")
+            base_explanation = base_explanation.rstrip(", ") #TODO: megnézni ezt a rész jobban
             
             # Minden sorra ugyanazt a magyarázatot adjuk
             explanations = [base_explanation] * len(X)
@@ -245,7 +245,7 @@ class Explainer:
             numeric_cols = [c for c in feature_cols if pd.api.types.is_numeric_dtype(row[c])]
             if numeric_cols:
                 # Sort by absolute value (most important)
-                sorted_cols = sorted(numeric_cols, key=lambda x: abs(row[x]) if not pd.isna(row[x]) else 0, reverse=True)
+                sorted_cols = sorted(numeric_cols, key=lambda x: abs(row[x]) if not pd.isna(row[x]) else 0, reverse=True) 
                 feature_cols = sorted_cols[:5]
             else:
                 feature_cols = feature_cols[:5]

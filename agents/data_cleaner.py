@@ -116,6 +116,8 @@ class DataCleaner:
 
     # -----------------------------------------------------------------
     # 7️⃣  Kiegyensúlyozott osztályok (SMOTE) – csak a *kiválogatott* mintára
+    # A SOTE egy olyan adatfeldolgozási eljár a gépi tanulásban, amelyet a kiegyensúlyozatlan adathalmazok kezelésére használnak. Gyakori probléma, hogy az egyik osztályból,
+    # pl. támadások kevesebb mint aáll rendelkezésre mint a másikból. A SMOTE segít felduzzasztani a kissebségi osztályt szintetikus adatok generálásával.
     # -----------------------------------------------------------------
     def _balance_classes(self, df: pd.DataFrame, label_col: str = "label") -> pd.DataFrame:
         # MENTÉS: dátum és időbélyeg oszlopok kivétele SMOTE előtt

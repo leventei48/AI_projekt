@@ -342,7 +342,7 @@ class Correlator:
             if len(sessions) > 0:
                 pbar.set_postfix({
                     "session-ek": len(sessions),
-                    "kockázat átlag": f"{np.mean([s.get('risk_score', 0) for s in sessions[-10:]]) if len(sessions) >= 10 else 0:.1f}"
+                    "kockázat átlag": f"{np.mean([s.get('risk_score', 0) for s in sessions[-10:]]) if len(sessions) >= 10 else 0:.1f}" #csak az utolsó 10 session átlagát mutatja
                 })
         
         pbar.close()
