@@ -37,14 +37,14 @@ ids_crew/
 ### Előfeltételek
 ```bash
 # Python csomagok telepítése
-pip install pandas scikit-learn imbalanced-learn tqdm
+pip install -r requirements.txt
 
-# Opcionális: SHAP (magyarázatokhoz)
+# SHAP telepítése (magyarázatokhoz)
 pip install shap
 
-# Opcionális: Ollama (LLM módhoz)
+# Ollama telepítése (LLM módhoz)
 # Letöltés: https://ollama.com/download
-ollama pull llama3.1:8b-instruct
+ollama pull llama3
 ```
 
 ### Futtatás
@@ -89,7 +89,7 @@ A program futtatása után létrejönnek:
 
 ## 🧩 Fájlok Részletes Leírása
 
-### **Agensek**
+### **Agentek**
 
 #### 1. `data_cleaner.py`
 - **Cél**: Nyers adatok előfeldolgozása
@@ -185,7 +185,7 @@ crew = Crew(
 - **Parancs**: `--max-rows 10000`
 
 #### 3. **Ollama modell nem található**
-- **Megoldás 1**: Telepítsd a modellt: `ollama pull llama3.1:8b-instruct`
+- **Megoldás 1**: Telepítsd a modellt: `ollama pull llama3`
 - **Megoldás 2**: Használj más modellt: `llm_name="llama2"` a detector.py-ban
 - **Megoldás 3**: Használd az ML módot (nem kell Ollama)
 
@@ -209,19 +209,6 @@ crew = Crew(
 | 50,000 | ~5-10 perc | Nagyon lassú |
 | 100,000 | ~15-25 perc | Nem ajánlott |
 
-### Memóriahasználat:
-- **Alap**: ~2-4 GB (50,000 sor)
-- **Maximum**: ~8 GB (250,000 sor, teljes feldolgozás)
-
-## 🤝 Közreműködés
-
-A projekt nyitott a fejlesztésre. Fontosabb irányok:
-
-1. **Új detektor algoritmusok** (XGBoost, Neural Networks)
-2. **További LLM szolgáltatók** (OpenAI, Anthropic)
-3. **Real-time monitoring** támogatás
-4. **Webes felület** (Flask/Django)
-5. **További tesztadatok** és benchmark-ok
 
 ## 📚 Hasznos Linkek
 
