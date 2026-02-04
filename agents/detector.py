@@ -1,4 +1,3 @@
-# agents/detector.py (javított LLM rész)
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -25,12 +24,12 @@ class Detector:
         self.llm_name = llm_name
         self.llm_temp = llm_temp
 
-        if self.mode == "ml":
+        if self.mode == "ml": #Random forest adatainak beállitása
             self.model = model or RandomForestClassifier(
-                n_estimators=200,
-                n_jobs=-1,
-                random_state=42,
-                class_weight="balanced",
+                n_estimators=200, 
+                n_jobs=-1, 
+                random_state=42, 
+                class_weight="balanced", 
                 verbose=0
             )
         elif self.mode == "llm":
